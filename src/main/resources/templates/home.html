@@ -1,1 +1,25 @@
-<h1>HOME PAGE</h1>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{layouts/layout}">
+
+<div layout:fragment="content">
+
+
+	<h1>HOME PAGE</h1>
+
+	<form method="post">
+
+		<input type="text" name="name" placeholder="name">
+		<input type="text" name="password" placeholder="password">
+		<input type="text" name="address" placeholder="address">
+		<input type="text" name="email" placeholder="email">
+		<input type="text" name="gender" placeholder="gender">
+
+		<button>JOIN</button>
+
+	</form>
+
+
+
+</div>
+
+</html>

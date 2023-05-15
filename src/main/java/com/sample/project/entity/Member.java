@@ -41,6 +41,6 @@ public class Member {
 	private Timestamp createdTime;
 
 	@Enumerated(EnumType.STRING)
-	private EnumType role;
+	private MemberType role;
 
 }
