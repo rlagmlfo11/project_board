@@ -2,19 +2,42 @@
 <html lang="ko" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
 	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 
+<style>
+	header {
+		position: fixed;
+		left: 0;
+		right: 0;
+		top: 0;
+		height: 4rem;
+		background: lightgray;
+		line-height: 4rem;
+		text-align: center;
+	}
 
-<th:block layout:fragment="script"></th:block>
+	div {
+		top: 4rem;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		text-align: center;
+	}
 
-<!-- [header] 영역 시작 -->
-<header th:replace="fragments/header :: headerFragment"></header>
-<!-- [header] 영역 끝 -->
+	footer {
+		text-align: center;
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+	}
+</style>
 
-<!-- [content] 영역 시작 -->
-<div layout:fragment="content"></div>
-<!-- [content] 영역 끝 -->
+<body>
+	<header th:replace="fragments/header :: headerFragment"></header>
 
-<!-- [footer] 영역 시작 -->
-<footer th:replace="fragments/footer :: footerFragment"></footer>
-<!-- [footer] 영역 끝 -->
+	<div layout:fragment="content" style="padding-top: 80px;">
+	</div>
+
+	<footer th:replace="fragments/footer :: footerFragment"></footer>
+</body>
 
 </html>
