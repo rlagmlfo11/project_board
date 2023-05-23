@@ -18,4 +18,15 @@ public class MemberService {
 		memberRepository.save(member);
 	}
 
+	public boolean loginMember(Member member) {
+		Member result = memberRepository.findMemberName(member.getName());
+		if (result == null) {
+			return false;
+		}
+		if (!result.getPassword().equals(member.getPassword())) {
+			return false;
+		}
+		return true;
+	}
+
 }
